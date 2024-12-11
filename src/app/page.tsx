@@ -1,3 +1,4 @@
+import Pad from "@/components/Pad";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -23,6 +24,7 @@ export default function HomePage() {
             <div>Are you a handpan maker?</div>
           </Link>
         </div>
+        <Pad note="C4" />
       </div>
     </main>
   );

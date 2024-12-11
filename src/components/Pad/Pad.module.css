@@ -1,0 +1,24 @@
+/* @import "tailwindcss/theme" theme(reference); */
+
+.Pad {
+  /* @apply absolute top-1/2 left-1/2 aspect-square; */
+  /* @apply rounded-full; */
+
+  /* --pad-center: calc(-0.5 * var(--pad-size)); 1 */
+  --pad-size: 48vmin;
+
+  width: var(--pad-size);
+
+  /* transform: translate(var(--pad-center), var(--pad-center)); */
+  /* translate: var(--pad-center) var(--pad-center); 4 */
+  /* --pad-radius: calc(var(--pad-offset) * (48vmin - var(--pad-size) / 2)); */
+  /* Position around center of parent, by taking --angle into account */
+  /* translate: calc(cos(var(--pad-angle)) * var(--pad-radius))
+    calc(sin(var(--pad-angle) * -1) * var(--pad-radius)) */
+  transform: translate(
+    calc(cos(var(--pad-angle)) * var(--pad-radius)),
+    calc(sin(var(--pad-angle) * -1) * var(--pad-radius))
+  );
+
+  translate: (var(--pad-center) var(--pad-center));
+}
